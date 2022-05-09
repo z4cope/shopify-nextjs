@@ -1,9 +1,13 @@
-import ProductPageConent from "../../components/ProductPageConent";
+import ProductPageContent from "../../components/ProductPageContent";
 import { getAllProducts } from "../../lib/shopify";
 import { getSingleProduct } from "../../lib/shopify";
 
 const ProductPage = ({ product }) => {
-  return <ProductPageConent product={product} />;
+  return (
+    <div className="min-h-screen py-12 sm:pt-20">
+      <ProductPageContent product={product} />
+    </div>
+  );
 };
 
 export async function getStaticPaths() {
